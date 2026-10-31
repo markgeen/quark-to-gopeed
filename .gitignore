@@ -1,0 +1,13 @@
+# 调试产物
+*.log
+*.sqlite
+*.db
+a.user.js
+
+# 截图（保留扩展图标）
+*.png
+!gopeed-extension/icon.png
+
+# 系统
+Thumbs.db
+.DS_Store
