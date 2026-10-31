@@ -11,3 +11,4 @@ a.user.js
 # 系统
 Thumbs.db
 .DS_Store
+*.zip
