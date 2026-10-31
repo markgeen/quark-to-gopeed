@@ -115,10 +115,17 @@ Mozilla/5.0 ... quark-cloud-drive/3.20.0 Chrome/112 ... Channel/pckk_other_ch
 
 ## 致谢
 
-- [LinkSwift](https://github.com/hmjz100/LinkSwift) 与 [网盘直链下载助手](https://github.com/syhyz1990/baiduyun)
-  —— 本项目的接口用法（分享上下文取链、客户端 UA、`file/download` 参数组合）参考了这两个项目。
-  本项目为独立实现，未复制其源码；若你在此基础上直接复用它们的代码，请遵循其原始许可证并保留署名。
-- [Gopeed](https://gopeed.com/) —— 下载器。
+本项目的思路与接口用法来自以下社区项目，特此感谢：
+
+| 项目 | 作者 | 本项目参考了什么 |
+| --- | --- | --- |
+| [LinkSwift](https://github.com/hmjz100/LinkSwift) | hmjz100 | 夸克分享页的取链路径：`sharepage/token` → `detail` → `file/download`，以及必须带 `pwd_id + stoken + fids_token` 才是分享上下文直链；还有伪装 `quark-cloud-drive` 客户端 UA 的做法 |
+| [网盘直链下载助手](https://github.com/syhyz1990/baiduyun) | 油小猴 | LinkSwift 的上游项目，多网盘直链提取的原始实现 |
+| [gopeed-extension-quark](https://github.com/iGwkang/gopeed-extension-quark) | iGwkang | Gopeed 侧插件的工程结构与 `onResolve` / `onStart` 用法 |
+| [gopeed-extension-quark](https://github.com/muyan556/gopeed-extension-quark) | muyan556 | 转存式解析流程（`save` → 轮询 → `download` → 删除）的参考实现 |
+| [Gopeed](https://gopeed.com/) | Gopeed | 下载器本体与扩展运行时 |
+
+本项目的代码为独立实现，未直接复制上述项目的源码。若你在此基础上继续复用它们的代码，请遵循其原始许可证并保留署名。
 
 ---
 
